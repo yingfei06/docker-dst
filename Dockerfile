@@ -44,10 +44,9 @@ RUN cd /root/DST/bin  \
     && echo "/root/DST/bin/dontstarve_dedicated_server_nullrenderer -shard Master & /root/DST/bin/dontstarve_dedicated_server_nullrenderer -shard Caves" >> start.sh \
     && chmod +x start.sh
 
+EXPOSE 10889/udp
 EXPOSE 11000/udp
-EXPOSE 11001/udp
-EXPOSE 27018/udp
-EXPOSE 27019/udp
+EXPOSE 10999/udp
 
 WORKDIR /root/DST/bin
 CMD "/root/DST/bin/start.sh"
