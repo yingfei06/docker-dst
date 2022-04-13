@@ -21,8 +21,8 @@ RUN set -x \
     && wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz \
     && tar zxvf steamcmd_linux.tar.gz -C /root/steamcmd \
     && ./steamcmd.sh \
-        +login anonymous \
         +force_install_dir /root/DST \
+        +login anonymous \
         +app_update 343050  validate \
         +quit \
     && mkdir -p /root/github \
