@@ -1,7 +1,5 @@
-FROM ubuntu:20.04
-
-RUN sed -i "s@http://.*archive.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list \
-    && sed -i "s@http://.*security.ubuntu.com@http://repo.huaweicloud.com@g" /etc/apt/sources.list
+ARG BASE_IMAGE=debian:buster-slim
+FROM $BASE_IMAGE
 
 RUN set -x \
     && dpkg --add-architecture i386 \
